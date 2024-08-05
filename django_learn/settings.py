@@ -61,6 +61,7 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.media',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -127,7 +128,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+#引用位于STATIC_ROOT中的静态文件时使用的 URL
+STATIC_URL = 'static_root/'
+#收集部署静态文件的目录的绝对路径。
+STATIC_ROOT = BASE_DIR / 'static_root/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static/',
+]
+
+MEDIA_URL = 'media/'
+#设置存储用户上传文件的目录
+MEDIA_ROOT = BASE_DIR / 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

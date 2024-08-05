@@ -23,5 +23,6 @@ class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     Choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
+    avatar = models.FileField(verbose_name='avatar', upload_to='polls/')
     def __str__(self):
         return self.Choice_text
