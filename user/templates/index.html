@@ -1,0 +1,10 @@
+{% if user_list %}
+    {%for user in user_list %}
+    <span>name: {{ user.name }}</span>
+    <span>email: {{ user.email }}</span>
+    <br>
+    {% endfor %}
+{% else %}
+<p>No user are available.</p>
+{% endif %}
+<a href="{% url 'sign_up' %}">注册</a>
