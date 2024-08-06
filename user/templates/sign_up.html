@@ -1,5 +1,18 @@
-<form action="{% url 'signUp' %}" method="post">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value="signUp">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <form action="{% url 'signUp' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="signUp">
+    </form>
+</body>
+
+</html>

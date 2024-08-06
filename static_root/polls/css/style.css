@@ -1,6 +1,10 @@
+body {
+    background: #90d0d8ed
+}
 li a {
     color: green;
 }
-body {
-    background: #90d0d8ed
+img {
+    width: 50px;
+    height: 80px;
 }

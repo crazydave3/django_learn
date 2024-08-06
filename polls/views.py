@@ -48,7 +48,6 @@ def vote(request, question_id):
             },
         )
     else:
-        print(selected_choice.votes)
         selected_choice.votes += 1
         selected_choice.save()
         # Always return an HttpResponseRedirect after successfully dealing
