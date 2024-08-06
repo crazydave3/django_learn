@@ -1,4 +1,4 @@
 const returnIndex = () => {
     console.log('111')
-    // window.location.href = '/polls'
+    window.location.href = '/polls'
 }
